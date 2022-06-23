@@ -74,6 +74,14 @@ h1 {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.create-container:hover::before {
+  border: solid 2px transparent;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
 #input-field {
   border: none;
   outline: none;
@@ -100,15 +108,16 @@ h1 {
 }
 
 .added-task {
-  background-image: url(./images/icon-circle.svg);
+  /* background-image: url(./images/icon-circle.svg);
   background-repeat: no-repeat;
   background-size: 27px;
-  background-position: top 50% left 2%;
+  background-position: top 50% left 2%; */
   padding: 22px 0 17px 47px;
   border-bottom: 1px solid var(--very-light-grayish-blue);
   color: var(--very-dark-grayish-blue);
   font-size: 16px;
 }
+
 #no-tasks-p {
   padding: 22px 0 17px 0;
   font-size: 16px;
@@ -135,4 +144,44 @@ h1 {
   gap: 20px;
   justify-content: space-between;
   font-weight: 700;
+}
+.fa-circle {
+  padding: 3px;
+}
+.fa-circle:hover {
+  /* border: solid 2px transparent;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-origin: border-box;
+  background-clip: content-box, border-box; */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(hsl(192, 100%, 67%)),
+    to(hsl(280, 87%, 65%))
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 3px;
+}
+
+.fa-circle:active {
+  background-color: blue;
+}
+.checked {
+  text-decoration: line-through;
+}
+
+.fa-circle-check {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(hsl(192, 100%, 67%)),
+    to(hsl(280, 87%, 65%))
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 3px;
 }
